@@ -1,0 +1,15 @@
+This is a Spring boot application created to use docker file to create images.
+
+Steps to create docker image:
+1. Clone this project
+2. Dockerfile has already been created in the project
+3. Open terminal and go to the folder where Dockerfile exist.
+4. Run "docker build <path of the location where Dockerfile exits>". If we are in same folder, User .
+Example - docker build .
+5. After running the above command there will be dockerimage created with an id.
+6. Note the ID of docker image.
+7, Run the docker image by following command,
+docker run -p 80:8080 <ID> // -p 80:8080 , 80 is the port docker should listen all requests for the actual application port 8080.
+8. After it has been run, Our spring boot application is UP and Running.
+9. Test it by invoking the following either in browser or in postman
+http://localhost/hello - GET call
